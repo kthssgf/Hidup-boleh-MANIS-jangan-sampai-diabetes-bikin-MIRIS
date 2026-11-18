@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hidup boleh MANIS, jangan sampai diabetes bikin MIRIS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap">
+<style>
+:root{--bg:#f2f7f3;--surf:#fff;--ink:#15302a;--mut:#4f6a61;--line:#d5e3da;--leaf:#1f7a4d;--sun:#f0a81f;--chili:#d0402b;--soft:#e3f1e8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1c18;--surf:#17271f;--ink:#e8f2ec;--mut:#9db8ad;--line:#2a4237;--leaf:#5fcf94;--soft:#1d3329;color-scheme:dark}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;line-height:1.1;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800}h3{font-size:1.2rem;font-weight:800}
+p{margin:0 0 1em;max-width:68ch}a{color:var(--leaf)}
+section{padding:56px 20px;max-width:1040px;margin:0 auto}
+.lead{font-size:1.15rem;color:var(--mut)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:calc(8px + env(safe-area-inset-top,0px)) 16px 8px;display:flex;gap:6px 16px;overflow-x:auto;white-space:nowrap;font-weight:600;font-size:.92rem}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--leaf)}
+.hero{padding-top:64px}
+.tiles{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 8px}
+.tile{flex:1 1 130px;min-width:120px;background:var(--surf);border:2px solid var(--ink);border-radius:18px;padding:14px;text-decoration:none;color:var(--ink);transition:transform .15s}
+.tile:hover,.tile:focus-visible{transform:translateY(-4px);outline:3px solid var(--sun)}
+.tile b{display:block;font:800 3.4rem/1 'Bricolage Grotesque',sans-serif}
+.tile:nth-child(1) b{color:var(--chili)}.tile:nth-child(2) b{color:var(--leaf)}.tile:nth-child(3) b{color:#c58a00}.tile:nth-child(4) b{color:#2c7fb8}.tile:nth-child(5) b{color:#8a4fbf}
+.tile span{font-size:.9rem;line-height:1.3;display:block}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card.big{border-left:6px solid var(--leaf)}
+.tag{display:inline-block;font-weight:600;font-size:.85rem;background:var(--soft);color:var(--leaf);padding:2px 10px;border-radius:99px;margin-bottom:8px}
+ul{margin:0;padding-left:1.2em}li{margin-bottom:.4em}
+.note{font-size:.88rem;color:var(--mut)}
+.steps{counter-reset:s;display:grid;gap:14px}
+.step{display:flex;gap:14px;background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:16px}
+.step:before{counter-increment:s;content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:var(--leaf);color:#fff;display:grid;place-items:center;font:800 1rem 'Bricolage Grotesque',sans-serif}
+.step p{margin:0}
+.plate-wrap{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+.plate{position:relative;width:min(100%,380px);aspect-ratio:1;margin:auto;border-radius:50%;border:12px solid #fff;box-shadow:0 0 0 2px var(--line),0 10px 30px rgba(0,0,0,.18);background:conic-gradient(#8fd19e 0 33%,#f7d98a 33% 66%,#f4a59a 66% 83%,#ffc28a 83% 100%)}
+.seg{position:absolute;transform:translate(-50%,-50%);text-align:center;color:#17332a;line-height:1.15;width:34%}
+.seg i{font-style:normal;font-size:1.7rem;display:block;letter-spacing:2px}
+.seg b{font:800 1.5rem 'Bricolage Grotesque',sans-serif;display:block}
+.seg small{font-size:.74rem;font-weight:600;display:block}
+.legend{display:grid;gap:10px}
+.leg{display:flex;gap:12px;background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.dot{flex:none;width:18px;height:18px;border-radius:50%;margin-top:5px}
+.side{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.side span{background:var(--soft);border-radius:99px;padding:4px 14px;font-weight:600;font-size:.92rem}
+.manis{display:grid;gap:16px}
+.m{display:grid;grid-template-columns:84px 1fr;gap:16px;background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:18px}
+.m .L{font:800 4.6rem/1 'Bricolage Grotesque',sans-serif;text-align:center}
+.swap{width:100%;border-collapse:collapse;background:var(--surf);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.swap td,.swap th{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.swap th{background:var(--soft)}
+.tablewrap{overflow-x:auto}
+.check label{display:flex;gap:12px;align-items:flex-start;background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--leaf);flex:none;margin-top:2px}
+.bar{height:14px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 4px}
+.bar div{height:100%;width:0;background:var(--leaf);transition:width .3s}
+.warn{border:2px dashed var(--chili);border-radius:14px;padding:16px;margin-top:24px}
+footer{background:var(--soft);padding:40px 20px calc(40px + env(safe-area-inset-bottom,0px))}
+footer div{max-width:1040px;margin:auto}footer ol{padding-left:1.2em;font-size:.9rem;color:var(--mut)}footer li{margin-bottom:.5em}
+@media (max-width:520px){.m{grid-template-columns:56px 1fr}.m .L{font-size:3.2rem}}
+:root{--c0:#fff0c2;--c1:#fff7df;--c2:#ffe6e2;--c3:#def2ff;--c4:#e2f6da;--c5:#efe4ff;--c6:#ffe9d0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c0:#3a2f12;--c1:#2c2815;--c2:#35201f;--c3:#16293a;--c4:#1b3320;--c5:#2a2040;--c6:#3a2a17}}
+.hero{background:var(--c0);box-shadow:0 0 0 100vmax var(--c0);clip-path:inset(0 -100vmax);position:relative}
+#kenali{background:var(--c1);box-shadow:0 0 0 100vmax var(--c1);clip-path:inset(0 -100vmax)}
+#faktor{background:var(--c2);box-shadow:0 0 0 100vmax var(--c2);clip-path:inset(0 -100vmax)}
+#tubuh{background:var(--c3);box-shadow:0 0 0 100vmax var(--c3);clip-path:inset(0 -100vmax)}
+#dash{background:var(--c4);box-shadow:0 0 0 100vmax var(--c4);clip-path:inset(0 -100vmax)}
+#manis{background:var(--c5);box-shadow:0 0 0 100vmax var(--c5);clip-path:inset(0 -100vmax)}
+#kebiasaan{background:var(--c6);box-shadow:0 0 0 100vmax var(--c6);clip-path:inset(0 -100vmax)}
+#kenali h2:before{content:"🔎 "}#faktor h2:before{content:"⚠️ "}#tubuh h2:before{content:"🔑 "}#dash h2:before{content:"🍽️ "}#manis h2:before{content:"🍬 "}#kebiasaan h2:before{content:"🌱 "}footer h2:before{content:"📚 "}
+h1{font-size:clamp(2rem,6.2vw,3.7rem);line-height:1.12}
+h1 em{font-style:normal;padding:0 .18em;border-radius:.22em;background:var(--sun);color:#15302a}
+h1 em+em,h1 em:last-of-type{background:var(--chili);color:#fff}
+.sub{font:800 clamp(1.25rem,3.2vw,1.8rem)/1.3 'Bricolage Grotesque',sans-serif;color:var(--leaf);margin:0 0 .6em;max-width:none}
+.stk{position:absolute;top:12px;right:16px;left:16px;display:flex;justify-content:flex-end;gap:14px;pointer-events:none}
+.stk span{font-size:1.9rem;animation:bob 3s ease-in-out infinite}
+.stk span:nth-child(2){animation-delay:.4s}.stk span:nth-child(3){animation-delay:.8s}.stk span:nth-child(4){animation-delay:1.2s}.stk span:nth-child(5){animation-delay:1.6s}
+@keyframes bob{50%{transform:translateY(-8px) rotate(10deg)}}
+@media (prefers-reduced-motion:reduce){.stk span{animation:none}}
+.card,.step,.m,.leg,.check label,.warn{border-radius:20px}
+.grid .card:nth-child(4n+1){border-top:6px solid var(--chili)}.grid .card:nth-child(4n+2){border-top:6px solid var(--sun)}.grid .card:nth-child(4n+3){border-top:6px solid #2c7fb8}.grid .card:nth-child(4n+4){border-top:6px solid #8a4fbf}
+.card.big{border-left:1px solid var(--line)}
+.tile{border-width:3px;border-radius:20px}
+.tile:nth-child(1){border-color:var(--chili);box-shadow:5px 5px 0 var(--chili)}.tile:nth-child(2){border-color:var(--leaf);box-shadow:5px 5px 0 var(--leaf)}.tile:nth-child(3){border-color:var(--sun);box-shadow:5px 5px 0 var(--sun)}.tile:nth-child(4){border-color:#2c7fb8;box-shadow:5px 5px 0 #2c7fb8}.tile:nth-child(5){border-color:#8a4fbf;box-shadow:5px 5px 0 #8a4fbf}
+.tile:hover{transform:translateY(-4px) rotate(-2deg)}
+.step:nth-child(1):before{background:var(--chili)}.step:nth-child(2):before{background:var(--sun);color:#15302a}.step:nth-child(3):before{background:#2c7fb8}.step:nth-child(4):before{background:#8a4fbf}
+.m{border-left:10px solid var(--line)}.m:nth-child(1){border-left-color:var(--chili)}.m:nth-child(2){border-left-color:var(--leaf)}.m:nth-child(3){border-left-color:var(--sun)}.m:nth-child(4){border-left-color:#2c7fb8}.m:nth-child(5){border-left-color:#8a4fbf}
+.bar{height:18px}.bar div{background:linear-gradient(90deg,var(--sun),var(--leaf))}
+.swap th{background:var(--sun);color:#15302a}
+.tag{background:var(--sun);color:#15302a}
+.ref{list-style:none;padding:0;font-size:.92rem;color:var(--mut)}.ref li{padding-left:2em;text-indent:-2em}
+</style>
+</head>
+<body>
+<nav aria-label="Navigasi">
+<a href="#kenali">Kenali</a><a href="#faktor">Faktor risiko</a><a href="#tubuh">Cara kerja</a><a href="#dash">Diet DASH</a><a href="#manis">Cegah: MANIS</a><a href="#kebiasaan">Ubah kebiasaan</a><a href="#referensi">Referensi</a>
+</nav>
+
+<section class="hero">
+<div class="stk" aria-hidden="true"><span>🍎</span><span>🥦</span><span>🏃</span><span>💧</span><span>🍬</span></div>
+<h1>Hidup boleh <em>MANIS</em>, jangan sampai diabetes bikin <em>MIRIS</em></h1>
+<p class="sub">Yuk, kenali diabetes beserta pencegahannya!</p>
+<p class="lead">Panduan singkat diabetes melitus tipe 2: apa itu, mengapa terjadi, dan lima langkah sederhana untuk mencegahnya. Ketuk huruf untuk melompat ke langkahnya.</p>
+<div class="tiles">
+<a class="tile" href="#m1"><b>M</b><span>Mulai mengurangi gula tambahan</span></a>
+<a class="tile" href="#m2"><b>A</b><span>Atur porsi dan jadwal makan</span></a>
+<a class="tile" href="#m3"><b>N</b><span>Nilai label gizi kemasan</span></a>
+<a class="tile" href="#m4"><b>I</b><span>Imbangi dengan aktivitas fisik</span></a>
+<a class="tile" href="#m5"><b>S</b><span>Screening gula darah berkala</span></a>
+</div>
+</section>
+
+<section id="kenali">
+<h2>Kenali diabetes tipe 2</h2>
+<div class="grid">
+<div class="card big"><span class="tag">Definisi</span>
+<p><b>Diabetes melitus (DM)</b> adalah penyakit kronis ketika kadar gula darah terlalu tinggi karena hormon insulin kurang atau tidak bekerja dengan baik. <b>Tipe 2</b> adalah jenis yang paling sering pada orang dewasa dan sangat erat kaitannya dengan gaya hidup.</p>
+<p class="note">Diagnosis (PERKENI, 2021): gula darah puasa ≥126 mg/dL, gula darah 2 jam setelah beban glukosa ≥200 mg/dL, HbA1c ≥6,5%, atau gula darah sewaktu ≥200 mg/dL disertai gejala.</p></div>
+<div class="card"><span class="tag">Gejala yang sering muncul</span>
+<ul><li>Sering haus dan sering buang air kecil</li><li>Mudah lapar, tetapi berat badan turun</li><li>Lemas, pandangan kabur</li><li>Luka sulit sembuh, kesemutan</li></ul>
+<p class="note">Banyak orang tidak bergejala sama sekali, sebab itu skrining penting.</p></div>
+</div>
+<h3 style="margin-top:32px">Epidemiologi: seberapa umum?</h3>
+<div class="grid">
+<div class="card"><p><b>Global.</b> WHO mencatat lebih dari 800 juta orang dewasa hidup dengan diabetes, dan sebagian besar berada di negara berpenghasilan rendah-menengah (World Health Organization, n.d.).</p></div>
+<div class="card"><p><b>Indonesia.</b> IDF menempatkan Indonesia di antara negara dengan jumlah penderita diabetes dewasa terbanyak, dan sebagian besar belum terdiagnosis. Angka terbaru ada di halaman IDF Indonesia (International Diabetes Federation, n.d.).</p></div>
+</div>
+<h3 style="margin-top:32px">Etiologi: apa penyebabnya?</h3>
+<p>Tidak ada satu penyebab tunggal. Diabetes tipe 2 muncul ketika <b>sel tubuh kurang peka terhadap insulin</b> (resistensi insulin) dan <b>pankreas lama-lama tidak sanggup memproduksi insulin yang cukup</b>. Pemicunya gabungan <b>bawaan genetik</b> dengan <b>gaya hidup</b> seperti berat badan berlebih, kurang gerak, dan pola makan tinggi gula.</p>
+</section>
+
+<section id="faktor">
+<h2>Faktor risiko</h2>
+<div class="grid">
+<div class="card"><span class="tag">Tidak bisa diubah</span>
+<ul><li>Usia 45 tahun ke atas</li><li>Orang tua atau saudara kandung dengan diabetes</li><li>Riwayat diabetes saat hamil atau melahirkan bayi &gt;4 kg</li></ul></div>
+<div class="card"><span class="tag">Bisa kita ubah</span>
+<ul><li>Berat badan berlebih, terutama lemak perut</li><li>Kurang aktivitas fisik</li><li>Pola makan tinggi gula, lemak jenuh, dan rendah serat</li><li>Tekanan darah tinggi dan kolesterol tidak normal</li><li>Merokok</li></ul></div>
+<div class="card"><span class="tag">Sinyal peringatan</span>
+<p><b>Prediabetes</b>: gula darah sudah di atas normal tetapi belum masuk batas diabetes. Pada tahap ini, perubahan gaya hidup paling efektif mencegah perkembangan menjadi diabetes.</p></div>
+</div>
+</section>
+
+<section id="tubuh">
+<h2>Apa yang terjadi di dalam tubuh?</h2>
+<p class="lead">Bayangkan insulin sebagai kunci, dan sel tubuh sebagai pintu yang harus dibuka agar gula (energi) bisa masuk.</p>
+<div class="steps">
+<div class="step"><p><b>Makan, gula darah naik.</b> Karbohidrat dicerna menjadi glukosa yang masuk ke darah.</p></div>
+<div class="step"><p><b>Pankreas mengirim insulin.</b> Insulin ibarat kunci yang membuka pintu sel agar glukosa masuk dan dipakai jadi energi.</p></div>
+<div class="step"><p><b>Gembok mulai macet.</b> Lemak berlebih, terutama di perut, dan kurang gerak membuat sel “bandel”. Kunci yang sama tidak lagi efektif. Inilah <b>resistensi insulin</b>. Hati juga ikut melepas gula tambahan ke darah.</p></div>
+<div class="step"><p><b>Pankreas kelelahan.</b> Ia memproduksi insulin ekstra, tetapi lama-lama tidak sanggup. Gula menumpuk di darah, dan bila dibiarkan bertahun-tahun dapat merusak mata, ginjal, saraf, dan pembuluh darah jantung.</p></div>
+</div>
+</section>
+
+<section id="dash">
+<h2>Diet DASH dan piring makanku</h2>
+<p><b>DASH</b> (<i>Dietary Approaches to Stop Hypertension</i>) adalah pola makan kaya sayur, buah, biji-bijian utuh, dan protein tanpa lemak, dengan garam, gula, serta lemak jenuh yang dibatasi. Standar ADA (American Diabetes Association, 2025) menyebutnya sebagai salah satu pola makan sehat yang dapat dipilih untuk mendukung kesehatan penderita maupun orang berisiko diabetes.</p>
+<div class="plate-wrap">
+<div>
+<div class="plate" role="img" aria-label="Piring: sayur 33 persen, makanan pokok 33 persen, lauk 17 persen, buah 17 persen">
+<div class="seg" style="left:75.8%;top:34.7%"><i>🥬🥦🥕</i><b>33%</b><small>Sayur</small></div>
+<div class="seg" style="left:50.9%;top:80%"><i>🍚🍠</i><b>33%</b><small>Makanan pokok</small></div>
+<div class="seg" style="left:23%;top:51%"><i>🐟🫘</i><b>17%</b><small>Lauk</small></div>
+<div class="seg" style="left:35%;top:22%"><i>🍎🍌</i><b>17%</b><small>Buah</small></div>
+</div>
+<p class="note" style="text-align:center;margin-top:12px">Proporsi per sekali makan, mengacu pada “Isi Piringku” (Kementerian Kesehatan Republik Indonesia, 2024). Sesuaikan dengan kebutuhan kalori Anda bersama tenaga gizi.</p>
+</div>
+<div class="legend">
+<div class="leg"><span class="dot" style="background:#8fd19e"></span><div><b>Sayur 33%.</b> Bayam, brokoli, wortel, kangkung. Aneka warna, kaya serat dan kalium.</div></div>
+<div class="leg"><span class="dot" style="background:#f7d98a"></span><div><b>Makanan pokok 33%.</b> Pilih biji-bijian utuh: nasi merah atau nasi campur, ubi, jagung. Hindari berlebih.</div></div>
+<div class="leg"><span class="dot" style="background:#f4a59a"></span><div><b>Lauk 17%.</b> Ikan, tempe, tahu, telur, ayam tanpa kulit. Dikukus, direbus, dipepes, dipanggang.</div></div>
+<div class="leg"><span class="dot" style="background:#ffc28a"></span><div><b>Buah 17%.</b> Utuh, bukan jus. Pilih yang tidak terlalu manis seperti apel, jambu, pepaya.</div></div>
+<div class="side"><span>🥛 Susu rendah lemak</span><span>🥜 Kacang tanpa garam</span><span>💧 Air putih</span></div>
+</div>
+</div>
+<div class="grid" style="margin-top:28px">
+<div class="card"><span class="tag">Batas harian (Kemenkes)</span><p style="margin:0">Gula tidak lebih dari <b>4 sdm</b>, garam <b>1 sdt</b>, lemak <b>5 sdm</b> per hari, termasuk yang tersembunyi dalam makanan olahan.</p></div>
+<div class="card"><span class="tag">Kurangi</span><p style="margin:0">Minuman manis, gorengan, daging olahan (sosis, kornet), makanan instan, dan camilan asin.</p></div>
+</div>
+</section>
+
+<section id="manis">
+<h2>Cegah dengan MANIS</h2>
+<p class="lead">Lima langkah yang mudah diingat dan bisa dimulai hari ini.</p>
+<div class="manis">
+<div class="m" id="m1"><div class="L" style="color:var(--chili)">M</div><div><h3>Mulai mengurangi gula tambahan</h3><p>Gula tambahan ada di teh manis, kopi sachet, soda, dan susu kental manis. Turunkan bertahap, misalnya dari 3 sendok jadi 2, lalu 1.</p><ul><li>Ganti minuman manis dengan air putih atau teh tawar</li><li>Total gula sehari tidak lebih dari 4 sdm</li></ul></div></div>
+<div class="m" id="m2"><div class="L" style="color:var(--leaf)">A</div><div><h3>Atur porsi dan jadwal makan</h3><p>Makan teratur menjaga gula darah tidak naik turun tajam.</p><ul><li>Tiga kali makan utama, plus selingan sehat bila perlu</li><li>Gunakan proporsi piring di atas, dan makan perlahan</li></ul></div></div>
+<div class="m" id="m3"><div class="L" style="color:#c58a00">N</div><div><h3>Nilai label gizi kemasan</h3><p>Biasakan membaca sebelum membeli.</p><ul><li>Lihat <b>takaran saji</b> dan jumlah sajian per kemasan, satu botol bisa berisi 2 sajian</li><li>Cek gula, natrium, dan lemak jenuh. Waspadai nama lain gula: sukrosa, sirup glukosa, dekstrosa, fruktosa</li></ul></div></div>
+<div class="m" id="m4"><div class="L" style="color:#2c7fb8">I</div><div><h3>Imbangi dengan aktivitas fisik</h3><p>Otot yang aktif memakai gula darah dan membuat insulin bekerja lebih baik.</p><ul><li>Aktivitas intensitas sedang (jalan cepat, bersepeda) minimal 150 menit per minggu</li><li>Latihan kekuatan 2–3 kali per minggu, dan jangan duduk lebih dari 30 menit tanpa bergerak</li></ul></div></div>
+<div class="m" id="m5"><div class="L" style="color:#8a4fbf">S</div><div><h3>Screening gula darah berkala</h3><p>Diabetes sering tanpa gejala, jadi periksa sebelum terlambat.</p><ul><li>Periksa gula darah puasa atau HbA1c, terutama bila punya faktor risiko</li><li>ADA (American Diabetes Association, 2025) menyarankan skrining mulai usia 35 tahun, dan diulang minimal tiap 3 tahun bila hasil normal</li></ul></div></div>
+</div>
+</section>
+
+<section id="kebiasaan">
+<h2>Langkah mengubah kebiasaan</h2>
+<p class="lead">Perubahan kecil yang konsisten lebih tahan lama daripada perubahan drastis. Mulai dengan satu tukar-ganti.</p>
+<div class="tablewrap"><table class="swap">
+<tr><th>Ganti</th><th>Dengan</th></tr>
+<tr><td>Teh manis, soda, kopi sachet</td><td>Air putih, teh atau kopi tanpa gula</td></tr>
+<tr><td>Nasi putih porsi besar</td><td>Nasi merah atau campur dengan porsi sesuai piring</td></tr>
+<tr><td>Ayam goreng, gorengan</td><td>Ikan pepes, tempe panggang, tahu kukus</td></tr>
+<tr><td>Camilan kemasan</td><td>Buah utuh, kacang tanpa garam</td></tr>
+<tr><td>Naik lift, duduk lama</td><td>Tangga, jalan 10 menit setelah makan</td></tr>
+</table></div>
+<h3 style="margin-top:32px">Komitmen minggu ini</h3>
+<p class="note">Centang yang sudah kamu lakukan. Progres tidak disimpan setelah halaman ditutup.</p>
+<div class="check" id="chk">
+<label><input type="checkbox"> Satu hari tanpa minuman manis</label>
+<label><input type="checkbox"> Membaca label gizi pada satu produk kemasan</label>
+<label><input type="checkbox"> Mengisi piring sesuai proporsi 33/33/17/17</label>
+<label><input type="checkbox"> Jalan cepat 30 menit, 5 hari</label>
+<label><input type="checkbox"> Menjadwalkan cek gula darah</label>
+</div>
+<div class="bar"><div id="fill"></div></div>
+<p id="pt" class="note">0 dari 5 selesai</p>
+<div class="warn"><b>Segera ke fasilitas kesehatan</b> bila sering haus, sering buang air kecil, berat badan turun tanpa sebab, atau punya faktor risiko tetapi belum pernah diperiksa. Halaman ini edukasi, bukan pengganti konsultasi dokter.</div>
+</section>
+
+<footer id="referensi"><div>
+<h2>Referensi</h2>
+<ul class="ref">
+<li>American Diabetes Association (2025) ‘5. Facilitating positive health behaviors and well-being to improve health outcomes: Standards of Care in Diabetes—2025’, <i>Diabetes Care</i>, 48(Supplement 1). Available at: <a href="https://doi.org/10.2337/dc25-s005">https://doi.org/10.2337/dc25-s005</a> (Accessed: 18 November 2026).</li>
+<li>International Diabetes Federation (n.d.) <i>Indonesia</i>. Available at: <a href="https://idf.org/our-network/regions-and-members/western-pacific/members/indonesia/">https://idf.org/our-network/regions-and-members/western-pacific/members/indonesia/</a> (Accessed: 18 November 2026).</li>
+<li>Kementerian Kesehatan Republik Indonesia (2024) <i>Isi Piringku: Panduan kebutuhan gizi seimbang harian</i>. Available at: <a href="https://ayosehat.kemkes.go.id/isi-piringku-kebutuhan-gizi-harian-seimbang">https://ayosehat.kemkes.go.id/isi-piringku-kebutuhan-gizi-harian-seimbang</a> (Accessed: 18 November 2026).</li>
+<li>Kementerian Kesehatan Republik Indonesia (2026) <i>Keputusan Menteri Kesehatan Nomor HK.01.07/Menkes/302/2026 tentang Pedoman Nasional Pelayanan Klinis Tatalaksana Diabetes Melitus Tipe 2 Dewasa</i>. Jakarta: Kementerian Kesehatan Republik Indonesia.</li>
+<li>Perkumpulan Endokrinologi Indonesia (PERKENI) (2021) <i>Pedoman pengelolaan dan pencegahan diabetes melitus tipe 2 dewasa di Indonesia 2021</i>. Jakarta: PB PERKENI.</li>
+<li>Perspektif gizi dan upaya inovatif dalam penanggulangan diabetes melitus (2023) <i>Temu Ilmiah Nasional PERSAGI</i>, 4, pp. 55–56. Available at: <a href="https://tin.persagi.org/index.php/tin/article/view/20">https://tin.persagi.org/index.php/tin/article/view/20</a> (Accessed: 18 November 2026).</li>
+<li>World Health Organization (n.d.) <i>Diabetes</i>. Available at: <a href="https://www.who.int/health-topics/diabetes">https://www.who.int/health-topics/diabetes</a> (Accessed: 18 November 2026).</li>
+</ul></div></footer>
+
+<script>
+(function(){
+var b=document.querySelectorAll('#chk input'),f=document.getElementById('fill'),t=document.getElementById('pt');
+function u(){var n=0;b.forEach(function(x){if(x.checked)n++});f.style.width=(n/b.length*100)+'%';t.textContent=n+' dari '+b.length+' selesai'+(n===b.length?'. Mantap!':'')}
+b.forEach(function(x){x.addEventListener('change',u)});
+})();
+</script>
+</body>
+</html>
